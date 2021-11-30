@@ -14,7 +14,11 @@ if($conn === false){
     die("Error: could not connect".mysqli_connect_error());
 }
 
-/* mengecek tombol pesan ditekan  data tersebut sudah di update / dihapus*/
+
+
+
+
+
 
 
 
