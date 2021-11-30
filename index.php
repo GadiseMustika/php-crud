@@ -5,6 +5,7 @@ require_once('config.php');
 
 // ambil data dari tabel barang
 $query = mysqli_query($conn, "SELECT * FROM employees");
+
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +17,7 @@ $query = mysqli_query($conn, "SELECT * FROM employees");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Karyawan</title>
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.min.css">
     <style>
         a {
             text-decoration: none;
@@ -27,11 +29,14 @@ $query = mysqli_query($conn, "SELECT * FROM employees");
 
 
     <div class="container mt-4">
-        <h4 class="text-center">Daftar Karyawan</h4>
+        <h4 class="text-center my-2">Daftar Karyawan</h4>
+        <h5 class="text-center my-2">PT.Makmur Jaya</h5>
         <div class="row">
             <div class="col-sm-12 my-4">
-                <a href="tambah.php"><button class="btn btn-danger"> + Tambah data</button></a>
-                <table class="table table-bordered  table-hover mt-4">
+                        <a href="tambah.php"><button class="btn btn-danger"> + Tambah data</button></a>
+                    </div>
+                </div>
+                <table class="table table-bordered  table-hover mt-2">
                     <thead class="table table-dark">
                         <tr>
                             <th scope="col">No.</th>
