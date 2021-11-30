@@ -13,10 +13,10 @@ if(isset($_POST["submit"] )){
     $status = htmlspecialchars($_POST["status"]);
 
     // query insert data
-   $result =  mysqli_query($conn, "INSERT INTO employees VALUES ('','$nama','$alamat', '$penghasilan','$hobi','$telepon','$status' )");
+   $query =  mysqli_query($conn, "INSERT INTO employees VALUES ('','$nama','$alamat', '$penghasilan','$hobi','$telepon','$status' )");
    
 // tampilkan pesan ketika user menambahkan
-    if($result){
+    if($query){
         echo "<script>
         alert('data berhasil ditambahkan');
         document.location.href = 'index.php';
