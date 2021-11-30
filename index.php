@@ -1,4 +1,6 @@
+
 <?php
+
 // include file config.php
 require_once('config.php');
 
@@ -20,12 +22,11 @@ $query = mysqli_query($conn, "SELECT * FROM employees");
 <body>
 
 
-
     <div class="container mt-4">
         <h4 class="text-center">Daftar Karyawan</h4>
         <div class="row">
             <div class="col-sm-12 my-4">
-                <button class="btn btn-danger"> + Tambah data</button>
+                <a href="tambah.php"><button class="btn btn-danger"> + Tambah data</button></a>
                 <table class="table table-bordered mt-4">
                     <thead>
                         <tr>
@@ -57,7 +58,7 @@ $query = mysqli_query($conn, "SELECT * FROM employees");
                                             <a href="">ubah</a>
                                         </div>
                                         <div class="col-sm-6">
-                                            <a href="">hapus</a>
+                                            <a href="hapus.php?id=<?=$row["id"]?>">hapus</a>
                                         </div>
                                     </div>
 
