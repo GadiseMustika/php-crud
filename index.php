@@ -55,10 +55,10 @@ $query = mysqli_query($conn, "SELECT * FROM employees");
                                 <td>
                                     <div class="row p-2">
                                         <div class="col-sm-6">
-                                            <a href="">ubah</a>
+                                            <a href="./update.php?id=<?= $row["id"] ?>">ubah</a>
                                         </div>
                                         <div class="col-sm-6">
-                                            <a href="hapus.php?id=<?=$row["id"]?>">hapus</a>
+                                            <a href="./hapus.php?id=<?= $row["id"] ?>">hapus</a>
                                         </div>
                                     </div>
 
