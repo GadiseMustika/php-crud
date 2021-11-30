@@ -1,4 +1,3 @@
-
 <?php
 
 // include file config.php
@@ -17,6 +16,11 @@ $query = mysqli_query($conn, "SELECT * FROM employees");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Karyawan</title>
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,8 +31,8 @@ $query = mysqli_query($conn, "SELECT * FROM employees");
         <div class="row">
             <div class="col-sm-12 my-4">
                 <a href="tambah.php"><button class="btn btn-danger"> + Tambah data</button></a>
-                <table class="table table-bordered mt-4">
-                    <thead>
+                <table class="table table-bordered  table-hover mt-4">
+                    <thead class="table table-dark">
                         <tr>
                             <th scope="col">No.</th>
                             <th scope="col">Nama</th>
@@ -53,12 +57,15 @@ $query = mysqli_query($conn, "SELECT * FROM employees");
                                 <td><?= $row["telepon"] ?></td>
                                 <td><?= $row["status"] ?></td>
                                 <td>
-                                    <div class="row p-2">
+                                    <div class="row p-3">
                                         <div class="col-sm-6">
-                                            <a href="./update.php?id=<?= $row["id"] ?>">ubah</a>
+                                            <button class="btn btn-success"><a href="./update.php?id=<?= $row["id"] ?>" class="text-white">ubah</a>
+                                            </button>
                                         </div>
                                         <div class="col-sm-6">
-                                            <a href="./hapus.php?id=<?= $row["id"] ?>">hapus</a>
+                                            <button class="btn btn-danger">
+                                                <a href="./hapus.php?id=<?= $row["id"] ?>" class="text-white">hapus</a>
+                                            </button>
                                         </div>
                                     </div>
 
