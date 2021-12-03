@@ -121,7 +121,7 @@ if (isset($_POST["submit"])) {
                             </div>
                         </div>
 
-                        <button type="submit" value="simpan" name="submit" class="btn btn-danger my-4">Tambah Data</button>
+                        <button type="submit" value="simpan" name="submit" class="btn btn-danger my-4">Upd Data</button>
                     </div>
                 </div>
             </form>
